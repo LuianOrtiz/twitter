@@ -25,6 +25,17 @@ class UserService{
         user.setUsername = newUserName;
         return user
     }
+    
+    /**
+     * Parameters: list of user objects
+     * Return list of usernames
+     */
+    static getAllUsernames(usersList){
+        const usernameList = usersList.map(function(user) {
+            return user.username
+        })
+        return usernameList
+    }
 }
 
 module.exports = UserService
