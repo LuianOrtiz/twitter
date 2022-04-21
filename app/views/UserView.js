@@ -4,7 +4,7 @@ class UserView{
 
     /**
      * 
-     * @param {User} payload 
+     * @param {UserService} payload 
      * @returns User object
      */
     static createUser(payload){
