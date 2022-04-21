@@ -2,10 +2,6 @@ const UserService = require('./../../app/services/UserService')
 
 describe("Tests for UserService", () => {
     
-    /**
-     * Creacion de un usuario mediante UserService
-     * 
-     */
     test(`1. Create a new user using the UserService`, () => {
 
         const user = UserService.create(1, "LuianOrtiz", "Luian")
@@ -16,9 +12,6 @@ describe("Tests for UserService", () => {
         expect(user.bio).not.toBeUndefined()
     })
 
-    /**
-     * Convertir el objeto user a una lista de atributos
-     */
     test(`2. Get all user data in a list`, () => {
         const user = UserService.create(1, "LuianOrtiz", "Luian")
         const userInfoList = UserService.getInfo(user)
@@ -28,10 +21,6 @@ describe("Tests for UserService", () => {
         expect(userInfoList[3]).toBe("Sin bio")
     })
 
-    /**
-     * 
-     * 
-     */
     test(`3. Update username`, () => {
         const user = UserService.create(1, "LuianOrtiz", "Luian")
         UserService.updateUserUsername(user, "Angel")
